@@ -34,9 +34,9 @@ jobs:
       - name: Build app on VM
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ 52.170.236.243 }}
-          username: ${{ seniorproject-selasa-mbkm }}
-          password: ${{ 9Yyv6yHgD2nRCVnm }}
+          host: ${{ secret.HOST }}
+          username: ${{ secret.USERNAME }}
+          password: ${{ secret.PASSWORD }}
           port: ${{ 22 }}
           script: |
             eval "$(ssh-agent -s)"
